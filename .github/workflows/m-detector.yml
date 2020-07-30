@@ -1,0 +1,18 @@
+name: Down Detector test
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+
+jobs:
+  detector:
+    runs-on: ubuntu-latest
+    
+    services:
+      curlimages:
+        image: curlimages/curl
+        
+    steps:
+      - run: curl http://www.downexample.com || exit 1
+    # run test site to get notEqual to 200
+      
