@@ -1,0 +1,16 @@
+name: Down Detector Test - BuscaCEPApp.com
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+
+jobs:
+  detector:
+    runs-on: ubuntu-latest
+    
+    services:
+      curlimages:
+        image: curlimages/curl
+        
+    steps:
+      - run: curl http://buscacepapp.com || exit 1
