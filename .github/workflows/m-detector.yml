@@ -1,4 +1,4 @@
-name: Down Detector test
+name: Down Detector Test - MapasApp.com
 
 on:
   schedule:
@@ -13,6 +13,5 @@ jobs:
         image: curlimages/curl
         
     steps:
-      - run: curl http://www.downexample.com || exit 1
-    # run test site to get notEqual to 200
+      - run: curl http://mapasapp.com || exit 1
       
