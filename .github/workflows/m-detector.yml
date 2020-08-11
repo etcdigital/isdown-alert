@@ -13,5 +13,5 @@ jobs:
         image: curlimages/curl
         
     steps:
-      - run: curl http://mapasapp.com || exit 1
+      - run: curl https://mapasapp.com || exit 1
       
