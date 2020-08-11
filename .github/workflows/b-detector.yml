@@ -13,4 +13,4 @@ jobs:
         image: curlimages/curl
         
     steps:
-      - run: curl http://buscacepapp.com || exit 1
+      - run: curl https://buscacepapp.com || exit 1
